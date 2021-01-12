@@ -13,3 +13,17 @@
 .bold {
   font-weight: $font-weight-bold;
 }
+
+.expanded {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.img {
+  width: 12rem;
+  height: 12rem;
+  border: 2px solid $gray;
+  border-radius: 50%;
+}

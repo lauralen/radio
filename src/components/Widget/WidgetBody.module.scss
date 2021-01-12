@@ -1,0 +1,16 @@
+@import "~style/variables";
+
+.body {
+  height: 60vh;
+  padding: 3rem 2rem;
+  overflow: auto;
+  background-color: $background-light;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray;
+  }
+}

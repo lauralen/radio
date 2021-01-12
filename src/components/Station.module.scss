@@ -1,0 +1,15 @@
+@import "~style/variables";
+
+.station {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+  :first-child {
+    margin-right: 1rem;
+  }
+}
+
+.bold {
+  font-weight: $font-weight-bold;
+}

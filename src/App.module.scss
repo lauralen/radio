@@ -1,0 +1,13 @@
+@import "~style/variables";
+
+.list {
+  list-style-type: none;
+}
+
+.listItem {
+  padding: 1.3rem 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray-dark;
+  }
+}

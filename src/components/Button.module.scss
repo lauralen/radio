@@ -1,0 +1,12 @@
+@import "~style/variables";
+
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  img {
+    width: auto;
+    height: 3rem;
+  }
+}

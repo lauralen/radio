@@ -1,0 +1,11 @@
+@import "~style/variables";
+
+.widget {
+  width: 95vw;
+  max-width: 40rem;
+  max-height: 95vh;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.75);
+  background: $background-light;
+}

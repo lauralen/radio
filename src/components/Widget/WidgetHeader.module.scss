@@ -1,0 +1,18 @@
+@import "~style/variables";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  color: $white;
+  background-color: $primary;
+}
+
+.icon {
+  width: auto;
+  height: 2rem;
+}

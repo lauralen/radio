@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import WidgetFooter from "components/Widget/WidgetFooter";
 
 test("renders footer without text", () => {
-  render(<WidgetFooter />);
+  render(<WidgetFooter selectedStation={null} />);
 
   expect(screen.queryByText(/currently playing/i)).not.toBeInTheDocument();
   expect(screen.queryByText(/fm/i)).not.toBeInTheDocument();

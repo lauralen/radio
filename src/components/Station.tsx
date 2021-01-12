@@ -4,7 +4,7 @@ import style from "./Station.module.scss";
 type Props = {
   title: string;
   frequency: string;
-  selectedStation?: string | null;
+  isSelected: boolean;
 };
 
 function Station({ title, frequency }: Props): JSX.Element {

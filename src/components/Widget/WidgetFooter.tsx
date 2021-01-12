@@ -2,7 +2,7 @@ import React from "react";
 import style from "./WidgetFooter.module.scss";
 
 type Props = {
-  selectedStation?: string | null;
+  selectedStation: string | null;
 };
 
 function WidgetFooter({ selectedStation }: Props): JSX.Element {

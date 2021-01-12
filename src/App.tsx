@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "style/main.scss";
 import style from "./App.module.scss";
 
@@ -12,6 +12,8 @@ import WidgetFooter from "components/Widget/WidgetFooter";
 import Station from "components/Station";
 
 function App(): JSX.Element {
+  const [selectedStation, setSelectedStation] = useState<string | null>(null);
+
   return (
     <Widget>
       <WidgetHeader />
@@ -19,16 +21,27 @@ function App(): JSX.Element {
         <ul className={style.list}>
           {stationsList.map(station => {
             const { title, frequency } = station;
+            const isSelected = title === selectedStation;
 
             return (
-              <li key={frequency} className={style.listItem}>
-                <Station title={title} frequency={frequency} />
+              <li
+                key={frequency}
+                className={style.listItem}
+                onClick={() => {
+                  setSelectedStation(isSelected ? null : title);
+                }}
+              >
+                <Station
+                  title={title}
+                  frequency={frequency}
+                  isSelected={isSelected}
+                />
               </li>
             );
           })}
         </ul>
       </WidgetBody>
-      <WidgetFooter />
+      <WidgetFooter selectedStation={selectedStation} />
     </Widget>
   );
 }

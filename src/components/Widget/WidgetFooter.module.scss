@@ -1,0 +1,16 @@
+@import "~style/variables";
+
+.footer {
+  height: 9rem;
+  padding: 2rem;
+  border-top: 1px solid $gray-dark;
+  text-align: center;
+  background-color: $background-medium;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  color: $primary;
+}

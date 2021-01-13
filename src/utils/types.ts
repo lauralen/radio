@@ -1,4 +1,4 @@
-export interface Station {
+export interface StationInterface {
   title: string;
   frequency: string;
 }

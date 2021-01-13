@@ -1,6 +1,6 @@
-import { Station } from "utils/types";
+import { StationInterface } from "utils/types";
 
-export const stationsList: Station[] = [
+export const stationsList: StationInterface[] = [
   {
     title: "Putin FM",
     frequency: "66,6"

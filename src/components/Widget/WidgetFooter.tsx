@@ -7,7 +7,7 @@ type Props = {
 
 function WidgetFooter({ selectedStation }: Props): JSX.Element {
   return (
-    <div className={style.footer}>
+    <div className={style.footer} data-testid="widget-footer">
       {selectedStation && (
         <>
           <div className={style.title}>Currently playing</div>

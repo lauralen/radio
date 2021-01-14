@@ -39,3 +39,15 @@ Run tests
 ```
 npm run test --watchAll
 ```
+
+Run end to end tests
+
+```
+npx cypress run
+```
+
+Open Cypress
+
+```
+npx cypress open
+```

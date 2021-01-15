@@ -1,8 +1,9 @@
 import React from "react";
 import style from "./WidgetFooter.module.scss";
+import { StationInterface } from "utils/types";
 
 type Props = {
-  selectedStation: string | null;
+  selectedStation: StationInterface | null;
 };
 
 function WidgetFooter({ selectedStation }: Props): JSX.Element {
@@ -11,7 +12,7 @@ function WidgetFooter({ selectedStation }: Props): JSX.Element {
       {selectedStation && (
         <>
           <div className={style.title}>Currently playing</div>
-          <div>{selectedStation}</div>
+          <div>{selectedStation.title}</div>
         </>
       )}
     </div>

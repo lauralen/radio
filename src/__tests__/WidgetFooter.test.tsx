@@ -10,7 +10,11 @@ test("renders footer without text", () => {
 });
 
 test("renders footer with text", () => {
-  render(<WidgetFooter selectedStation={"dribbble fm"} />);
+  render(
+    <WidgetFooter
+      selectedStation={{ id: 2, title: "dribbble fm", frequency: "77" }}
+    />
+  );
 
   expect(screen.queryByText(/currently playing/i)).toBeInTheDocument();
   expect(screen.queryByText(/dribbble fm/i)).toBeInTheDocument();

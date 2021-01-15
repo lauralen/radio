@@ -13,12 +13,7 @@ test("renders app without crashing", () => {
 });
 
 test("fetches and displays stations from API", async () => {
-  const data = [
-    {
-      title: "New FM",
-      frequency: "32"
-    }
-  ];
+  const data = [{ id: 1, title: "New FM", frequency: "32" }];
 
   jest.spyOn(global, "fetch").mockImplementation(() =>
     Promise.resolve({

@@ -17,7 +17,10 @@ function App(): JSX.Element {
   const [stations, setStations] = useState<StationInterface[]>(stationsList);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedStation, setSelectedStation] = useState<string | null>(null);
+  const [
+    selectedStation,
+    setSelectedStation
+  ] = useState<StationInterface | null>(null);
 
   useEffect(() => {
     fetchData();
@@ -46,15 +49,15 @@ function App(): JSX.Element {
         )}
         <ul className={style.list}>
           {stations.map(station => {
-            const { title, frequency } = station;
-            const isSelected = title === selectedStation;
+            const { id, title, frequency } = station;
+            const isSelected = id === selectedStation?.id;
 
             return (
               <li
-                key={frequency}
+                key={id}
                 className={style.listItem}
                 onClick={() => {
-                  setSelectedStation(isSelected ? null : title);
+                  setSelectedStation(isSelected ? null : station);
                 }}
               >
                 <Station

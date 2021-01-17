@@ -38,7 +38,7 @@ function Station({ title, frequency, isSelected }: Props): JSX.Element {
         </div>
       )}
 
-      <div className={style.station}>
+      <div className={style.station} data-testid="station-main">
         <span>{title}</span>
         <span className={style.bold}>{frequency}</span>
       </div>

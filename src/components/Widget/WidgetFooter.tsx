@@ -11,8 +11,10 @@ function WidgetFooter({ selectedStation }: Props): JSX.Element {
     <div className={style.footer} data-testid="widget-footer">
       {selectedStation && (
         <>
-          <div className={style.title}>Currently playing</div>
-          <div>{selectedStation.title}</div>
+          <div data-testid="footer-title" className={style.title}>
+            Currently playing
+          </div>
+          <div data-testid="selected-station">{selectedStation.title}</div>
         </>
       )}
     </div>

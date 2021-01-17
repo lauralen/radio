@@ -16,18 +16,23 @@ function Station({ title, frequency, isSelected }: Props): JSX.Element {
   return (
     <>
       {isSelected && (
-        <div className={style.expanded}>
-          <Button>
+        <div
+          data-testid="station-expanded"
+          className={style.expanded}
+          onClick={event => event.stopPropagation()}
+        >
+          <Button dataTestid="btn-minus">
             <img src={minusIcon} alt="Minus" />
           </Button>
 
           <img
+            data-testid="station-img"
             className={style.img}
             src="https://upload.wikimedia.org/wikipedia/en/6/67/ELO_Time_expanded_album_cover.jpg"
             alt="Station logo"
           />
 
-          <Button>
+          <Button dataTestid="btn-plus">
             <img src={plusIcon} alt="Plus" />
           </Button>
         </div>

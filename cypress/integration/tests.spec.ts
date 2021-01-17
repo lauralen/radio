@@ -26,6 +26,20 @@ describe("test stations list", () => {
       });
   });
 
+  it("click on expanded station info does not toggle it", () => {
+    cy.get("li").first().click();
+
+    cy.get("li").first().find("[data-testid=btn-minus]").should("exist");
+    cy.get("li").first().find("[data-testid=btn-plus]").should("exist");
+    cy.get("li").first().find("[data-testid=station-img]").should("exist");
+
+    cy.get("[data-testid=station-expanded]").click();
+
+    cy.get("li").first().find("[data-testid=btn-minus]").should("exist");
+    cy.get("li").first().find("[data-testid=btn-plus]").should("exist");
+    cy.get("li").first().find("[data-testid=station-img]").should("exist");
+  });
+
   it("displays selected station on widget footer", () => {
     cy.get(`[data-testid="widget-footer"]`).children().should("not.exist");
 

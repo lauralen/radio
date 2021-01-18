@@ -16,10 +16,12 @@ test("renders app without crashing", async () => {
 test("fetches and displays stations from API", async () => {
   const data = [{ id: 1, title: "New FM", frequency: "32" }];
 
-  jest.spyOn(global, "fetch").mockImplementation(() =>
-    Promise.resolve({
-      json: () => Promise.resolve(data)
-    })
+  jest.spyOn(global, "fetch").mockImplementation(
+    (): Promise<any> => {
+      return Promise.resolve({
+        json: () => Promise.resolve(data)
+      });
+    }
   );
 
   await act(async () => {
@@ -44,10 +46,12 @@ test("fetches and displays stations from API", async () => {
 });
 
 test("displays error and default stations on request fail", async () => {
-  jest.spyOn(global, "fetch").mockImplementation(() =>
-    Promise.resolve({
-      json: () => Promise.reject()
-    })
+  jest.spyOn(global, "fetch").mockImplementation(
+    (): Promise<any> => {
+      return Promise.resolve({
+        json: () => Promise.reject()
+      });
+    }
   );
 
   await act(async () => {

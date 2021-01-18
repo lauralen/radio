@@ -13,4 +13,29 @@
   font-size: $font-size-small;
   font-weight: $font-weight-bold;
   color: $primary;
+  animation: slideFromRight 0.2s linear;
+}
+
+.station {
+  animation: slideFromLeft 0.2s linear;
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: scaleX(0.1);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: scaleX(0.1);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }

@@ -14,7 +14,9 @@ function WidgetFooter({ selectedStation }: Props): JSX.Element {
           <div data-testid="footer-title" className={style.title}>
             Currently playing
           </div>
-          <div data-testid="selected-station">{selectedStation.title}</div>
+          <div data-testid="selected-station" className={style.station}>
+            {selectedStation.title}
+          </div>
         </>
       )}
     </div>

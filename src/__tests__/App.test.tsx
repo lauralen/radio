@@ -5,11 +5,12 @@ import App from "../App";
 
 global.fetch = jest.fn();
 
-test("renders app without crashing", () => {
-  render(<App />);
+test("renders app without crashing", async () => {
+  await act(async () => {
+    render(<App />);
+  });
 
   expect(screen.getByText("Stations")).toBeInTheDocument;
-  expect(screen.getByText(/loading/i)).toBeInTheDocument;
 });
 
 test("fetches and displays stations from API", async () => {

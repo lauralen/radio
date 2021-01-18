@@ -33,7 +33,7 @@ function App(): JSX.Element {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      setError(String(error));
+      setError("Failed to load stations from API");
     }
   };
 
@@ -42,11 +42,7 @@ function App(): JSX.Element {
       <WidgetHeader />
       <WidgetBody>
         {loading && <p className={style.info}>Loading stations from API...</p>}
-        {error && (
-          <p className={style.info}>
-            Failed to load stations from API: {error}
-          </p>
-        )}
+        {error && <p className={style.info}>{error}</p>}
         <ul className={style.list}>
           {stations.map(station => {
             const { id, title, frequency } = station;
